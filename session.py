@@ -13,6 +13,10 @@ from srs import due_items, new_items
 
 
 def all_items_for_tiers(unlocked_tier_ids):
+    """Each item also carries a 'tiers' list: every unlocked tier whose
+    (verb_tags, tenses) claims it. An item can belong to more than one tier
+    if tag/tense ranges overlap; this is used to attribute correct/wrong
+    answers to the right tier's rolling accuracy log."""
     items_by_id = {}
     for tier in TIERS:
         if tier["id"] not in unlocked_tier_ids:
@@ -21,7 +25,12 @@ def all_items_for_tiers(unlocked_tier_ids):
         for verb in verbs:
             for tense in tier["tenses"]:
                 for item in build_items(verb, tense):
-                    items_by_id[item_id(item)] = item
+                    iid = item_id(item)
+                    if iid in items_by_id:
+                        items_by_id[iid]["tiers"].append(tier["id"])
+                    else:
+                        item["tiers"] = [tier["id"]]
+                        items_by_id[iid] = item
     return items_by_id
 
 

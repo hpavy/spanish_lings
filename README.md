@@ -35,8 +35,28 @@ self-contained, no need to look anything up elsewhere.
 - `session.py` — builds a session by mixing due-for-review items with a
   slice of brand-new items from the currently unlocked tiers.
 - `cli.py` — the loop: shows a prompt, checks the answer, updates SRS state,
-  prints a progress bar per tier, unlocks the next tier once ≥80% of the
-  current tier's items reach box ≥3.
+  logs a rolling per-tier accuracy, unlocks the next tier once that
+  accuracy crosses a threshold (see below).
+
+## Passing a level
+
+A tier does **not** require mastering every item in its pool (that pool
+grows into the hundreds/thousands for later tiers, which made 100% coverage
+practically unreachable). Instead, unlocking is based on **recent accuracy**:
+
+- Every answer you give counts toward that tier's rolling log, capped at
+  the last 40 answers (`LOG_WINDOW` in `cli.py`).
+- Once you have at least 30 answers logged (`MIN_SAMPLE`) and your accuracy
+  over that window is ≥85% (`ACCURACY_THRESHOLD`), the next tier unlocks.
+- Getting an item wrong resets its own SRS box to 1 so it resurfaces soon,
+  but it doesn't block the tier unlock by itself — one bad answer just
+  nudges the rolling average down.
+
+In practice this means a handful of solid sessions (roughly 2-3 sessions of
+15 items with few mistakes) unlocks the next tier, rather than grinding
+every verb/tense/person combination to mastery first. Items from unlocked
+tiers never disappear from the review pool — the SRS keeps bringing back
+anything you're shaky on regardless of which tier is currently active.
 
 ## Tests
 

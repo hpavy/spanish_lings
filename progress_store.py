@@ -6,9 +6,11 @@ DEFAULT_PATH = os.path.join(os.path.dirname(__file__), "progress.json")
 
 def load(path=DEFAULT_PATH):
     if not os.path.exists(path):
-        return {"srs": {}, "unlocked_tiers": []}
+        return {"srs": {}, "unlocked_tiers": [], "tier_log": {}}
     with open(path) as f:
-        return json.load(f)
+        data = json.load(f)
+    data.setdefault("tier_log", {})
+    return data
 
 
 def save(data, path=DEFAULT_PATH):
