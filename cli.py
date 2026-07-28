@@ -1,3 +1,5 @@
+import glob
+
 from rich.console import Console
 from rich.panel import Panel
 
@@ -45,6 +47,12 @@ def maybe_unlock_next_tier(state):
     return False
 
 
+def book_chapter_for_tier(tier_id):
+    prefix = tier_id.split("_")[0]
+    matches = glob.glob(f"book/{prefix}_*.md")
+    return matches[0] if matches else None
+
+
 def print_progress(state):
     console.print()
     for tier in TIERS:
@@ -56,6 +64,11 @@ def print_progress(state):
         bar = "█" * filled + "░" * (bar_len - filled)
         console.print(f"[dim]{tier['id']:32s}[/dim] {bar} {mastered}/{total}")
     console.print()
+
+    current = state["unlocked_tiers"][-1]
+    chapter = book_chapter_for_tier(current)
+    if chapter:
+        console.print(f"[dim]rule reference: {chapter}[/dim]\n")
 
 
 def run_session(state, session_size=15):

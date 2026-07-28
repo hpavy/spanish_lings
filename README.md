@@ -17,6 +17,10 @@ stop anytime.
 Answer prompts in lowercase, accents matter (typing without accents is
 flagged as "almost" rather than wrong or silently accepted).
 
+Each session prints the path to the grammar chapter for your current tier
+(`book/`). Read it before drilling — the whole rule book is in Spanish and
+self-contained, no need to look anything up elsewhere.
+
 ## How it works
 
 - `conj_engine/` — the conjugation engine. Rule-based (stems, stem changes,
@@ -43,6 +47,17 @@ python3 -m conj_engine.test_paradigm
 Assertion-based checks for the engine (regular, stem-change, orthographic,
 irregular, combined cases). All verbs in `conj_engine/verbs_registry.py` are
 also smoke-tested against every tense with zero expected exceptions.
+
+## Grammar book
+
+`book/` holds one markdown chapter per tier (17 chapters + index), written
+in Spanish, covering every rule the curriculum drills — regular endings,
+stem/orthographic changes, all irregular paradigms, compound tenses,
+imperative, reflexives. All example tables are generated straight from the
+engine (`book/generate_tables.py`) so they can't drift from what the app
+actually quizzes.
+
+Start at `book/00_indice.md`.
 
 ## Adding verbs
 
