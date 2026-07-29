@@ -10,6 +10,7 @@ from curriculum import TIERS, verbs_for_tier
 from conj_engine.verbs_registry import VERBS
 from conj_engine.exercise import build_items, item_id
 from srs import due_items, new_items
+from tier_progress import tier_is_mastered
 
 
 def all_items_for_tiers(unlocked_tier_ids):
@@ -34,23 +35,62 @@ def all_items_for_tiers(unlocked_tier_ids):
     return items_by_id
 
 
-def pick_session(state, unlocked_tier_ids, session_size=15, new_ratio=0.3):
-    items_by_id = all_items_for_tiers(unlocked_tier_ids)
-    all_ids = list(items_by_id.keys())
-
-    due = due_items(state, all_ids)
-    fresh = new_items(state, all_ids)
-
+def _split_due_new(state, ids):
+    due = due_items(state, ids)
+    fresh = new_items(state, ids)
     due_seen = [i for i in due if i not in fresh]
     random.shuffle(due_seen)
     random.shuffle(fresh)
+    return due_seen, fresh
 
-    new_budget = max(1, int(session_size * new_ratio)) if fresh else 0
-    picked = due_seen[: session_size - new_budget] + fresh[:new_budget]
 
+def _fill_bucket(due_seen, fresh, budget, new_ratio):
+    if budget <= 0:
+        return []
+    new_budget = max(1, int(budget * new_ratio)) if fresh else 0
+    picked = due_seen[: budget - new_budget] + fresh[:new_budget]
+    if len(picked) < budget:
+        overflow = [i for i in due_seen + fresh if i not in picked]
+        picked += overflow[: budget - len(picked)]
+    return picked
+
+
+def pick_session(state, unlocked_tier_ids, session_size=15, new_ratio=0.3, current_tier_ratio=0.6):
+    """Reserves current_tier_ratio of the session for the most recently
+    unlocked tier, as long as it hasn't been mastered yet -- otherwise its
+    (usually small) pool gets drowned out by older, larger tiers that keep
+    resurfacing via SRS review. Once the current tier is mastered (i.e. the
+    whole curriculum is cleared, or between unlocks), sessions fall back to
+    an even mix across all unlocked tiers so no single tier hogs review
+    forever."""
+    items_by_id = all_items_for_tiers(unlocked_tier_ids)
+    current_tier_id = unlocked_tier_ids[-1]
+    still_learning_current = not tier_is_mastered(state, current_tier_id)
+
+    current_ids = [i for i, item in items_by_id.items() if current_tier_id in item["tiers"]]
+    other_ids = [i for i, item in items_by_id.items() if current_tier_id not in item["tiers"]]
+
+    if other_ids and still_learning_current:
+        current_budget = int(session_size * current_tier_ratio)
+        review_ids = other_ids
+    else:
+        # current tier already mastered (or nothing else to review): treat
+        # everything as one even pool instead of reserving a fixed share.
+        current_budget = 0
+        review_ids = current_ids + other_ids
+    review_budget = session_size - current_budget
+
+    current_due, current_fresh = _split_due_new(state, current_ids)
+    picked_current = _fill_bucket(current_due, current_fresh, current_budget, new_ratio)
+
+    review_due, review_fresh = _split_due_new(state, review_ids)
+    picked_review = _fill_bucket(review_due, review_fresh, review_budget, new_ratio)
+
+    picked = picked_current + picked_review
     if len(picked) < session_size:
-        overflow_pool = [i for i in due_seen + fresh if i not in picked]
-        picked += overflow_pool[: session_size - len(picked)]
+        leftover = [i for i in current_ids + other_ids if i not in picked]
+        random.shuffle(leftover)
+        picked += leftover[: session_size - len(picked)]
 
     random.shuffle(picked)
     return [items_by_id[i] for i in picked]
