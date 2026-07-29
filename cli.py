@@ -9,27 +9,9 @@ from progress_store import load, save
 from session import pick_session, all_items_for_tiers
 from srs import record_answer, due_items, new_items
 from checker import check
+from tier_progress import record_tier_log, tier_accuracy, tier_is_mastered, MIN_SAMPLE, ACCURACY_THRESHOLD
 
 console = Console()
-
-LOG_WINDOW = 40
-MIN_SAMPLE = 30
-ACCURACY_THRESHOLD = 0.85
-
-
-def record_tier_log(state, tier_ids, was_correct):
-    log = state["tier_log"]
-    for tier_id in tier_ids:
-        entries = log.setdefault(tier_id, [])
-        entries.append(was_correct)
-        del entries[:-LOG_WINDOW]
-
-
-def tier_accuracy(state, tier_id):
-    entries = state["tier_log"].get(tier_id, [])
-    if not entries:
-        return 0, 0.0
-    return len(entries), sum(entries) / len(entries)
 
 
 def maybe_unlock_next_tier(state):
@@ -44,8 +26,7 @@ def maybe_unlock_next_tier(state):
         return False
 
     tier = TIERS[idx]
-    sample_size, accuracy = tier_accuracy(state, tier["id"])
-    if sample_size >= MIN_SAMPLE and accuracy >= ACCURACY_THRESHOLD:
+    if tier_is_mastered(state, tier["id"]):
         state["unlocked_tiers"].append(TIERS[idx + 1]["id"])
         return True
     return False
