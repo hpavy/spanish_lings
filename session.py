@@ -80,10 +80,10 @@ def pick_session(state, unlocked_tier_ids, session_size=15, new_ratio=0.3, curre
         review_ids = current_ids + other_ids
     review_budget = session_size - current_budget
 
-    current_due, current_fresh = _split_due_new(state, current_ids)
+    current_due, current_fresh = _split_due_new(state["srs"], current_ids)
     picked_current = _fill_bucket(current_due, current_fresh, current_budget, new_ratio)
 
-    review_due, review_fresh = _split_due_new(state, review_ids)
+    review_due, review_fresh = _split_due_new(state["srs"], review_ids)
     picked_review = _fill_bucket(review_due, review_fresh, review_budget, new_ratio)
 
     picked = picked_current + picked_review
