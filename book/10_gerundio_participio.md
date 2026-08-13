@@ -15,6 +15,7 @@ según la persona — es una forma única, como el infinitivo.
 - Verbos -ir con cambio de raíz débil (capítulo 06) aplican ese mismo
   cambio en el gerundio: dormir → **durmiendo**, pedir → **pidiendo**,
   decir → **diciendo**, seguir → **siguiendo**.
+- Verbos -ir con diptongo aplica e -> i
 - Verbos -uir insertan una y: construir → **construyendo**.
 - ir es irregular: **yendo** (no *iendo*).
 
