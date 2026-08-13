@@ -6,7 +6,7 @@ perfect). Imperative and gerund are their own families outside this.
 """
 
 TENSE_COLORS = {
-    "present_indicative": "green",
+    "present_indicative": "bold green",
     "present_perfect": "bright_green",
     "preterite": "red",
     "imperfect_indicative": "yellow",
