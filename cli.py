@@ -10,7 +10,7 @@ from session import pick_session, all_items_for_tiers
 from srs import record_answer, due_items, new_items
 from checker import check
 from tier_progress import record_tier_log, tier_accuracy, tier_is_mastered, MIN_SAMPLE, ACCURACY_THRESHOLD
-from tense_colors import color_for_tense
+from tense_colors import color_for_tense, label_for_tense
 
 console = Console()
 
@@ -77,7 +77,8 @@ def run_session(state, session_size=15):
         answer = item["answer"]
         tense = item["tense"]
         color = color_for_tense(tense)
-        console.print(Panel(prompt(item), title=f"[{color}]{tense}[/{color}]", expand=False))
+        label = label_for_tense(tense)
+        console.print(Panel(prompt(item), title=f"[{color}]{label}[/{color}]", expand=False))
         user_input = console.input("> ")
 
         result = check(user_input, answer)
