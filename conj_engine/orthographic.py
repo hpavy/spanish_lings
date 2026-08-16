@@ -32,8 +32,8 @@ def _car_gar_zar(stem, ortho, ending_str):
 
 
 def _cer_cir_zc(stem, ending_str):
-    """conocer -> conozco (yo present only, before o)."""
-    if _first_letter(ending_str) != "o":
+    """conocer -> conozco (yo present, before o), conozca (subjunctive, before a)."""
+    if _first_letter(ending_str) not in ("o", "a", "á"):
         return stem
     return stem[:-1] + "zc"
 
