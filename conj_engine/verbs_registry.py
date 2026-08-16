@@ -37,7 +37,7 @@ VERBS = [
     {"infinitive": "repetir", "strong_change": "e_i", "weak_change": "e_i", "tags": ["b1", "stem_change"]},
 
     # u_ue
-    {"infinitive": "jugar", "strong_change": "u_ue", "tags": ["b1", "stem_change"]},
+    {"infinitive": "jugar", "strong_change": "u_ue", "ortho": "g_gu", "tags": ["b1", "stem_change"]},
 
     # orthographic: car/gar/zar
     {"infinitive": "buscar", "ortho": "c_qu", "tags": ["b1", "ortho"]},
