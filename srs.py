@@ -1,5 +1,5 @@
 """
-Leitner-box spaced repetition. Each item lives in a box 1-5. Correct answer
+Leitner-box spaced repetition. Each item lives in a box 1-7. Correct answer
 promotes it (longer interval before it's due again); wrong answer demotes it
 to box 1 (due immediately / very soon). Box -> interval in days below.
 
@@ -9,8 +9,8 @@ State is a flat dict keyed by item_id (see conj_engine.exercise.item_id):
 
 import datetime
 
-BOX_INTERVALS_DAYS = {1: 0, 2: 1, 3: 3, 4: 7, 5: 16}
-MAX_BOX = 5
+BOX_INTERVALS_DAYS = {1: 0, 2: 1, 3: 3, 4: 7, 5: 16, 6: 35, 7: 75}
+MAX_BOX = 7
 
 
 def _today():
