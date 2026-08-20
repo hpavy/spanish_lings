@@ -11,6 +11,7 @@ from srs import record_answer, due_items, new_items
 from checker import check
 from tier_progress import record_tier_log, tier_accuracy, tier_is_mastered, MIN_SAMPLE, ACCURACY_THRESHOLD
 from tense_colors import color_for_tense, label_for_tense
+from stats import print_dashboard
 
 console = Console()
 
@@ -108,7 +109,7 @@ def main():
     if not state["unlocked_tiers"]:
         state["unlocked_tiers"] = [TIERS[0]["id"]]
 
-    print_progress(state)
+    print_dashboard(state)
     run_session(state)
     save(state)
 
