@@ -75,26 +75,23 @@ def print_dashboard(state):
     console.print("  ".join(box_parts))
     console.print()
 
-    # --- learning tiers ------------------------------------------------------
-    learning = []
+    # --- all tiers ----------------------------------------------------------
+    console.print("[bold]tiers[/bold]")
     for tier in TIERS:
-        if tier["id"] in state["unlocked_tiers"]:
-            n, acc = tier_accuracy(state, tier["id"])
-            if not tier_is_mastered(state, tier["id"]):
-                learning.append((tier, n, acc))
-
-    if learning:
-        console.print("[bold]still learning[/bold]")
-        for tier, n, acc in sorted(learning, key=lambda x: x[2]):
-            bar_len = 20
-            pct = min(acc / ACCURACY_THRESHOLD, 1.0)
-            filled = int(bar_len * pct)
-            bar = "█" * filled + "░" * (bar_len - filled)
-            console.print(
-                f"  [dim]{tier['id']:35s}[/dim] {bar} "
-                f"{acc * 100:.0f}% ({n})"
-            )
-        console.print()
+        if tier["id"] not in state["unlocked_tiers"]:
+            break
+        n, acc = tier_accuracy(state, tier["id"])
+        mastered = tier_is_mastered(state, tier["id"])
+        bar_len = 20
+        pct = min(acc / ACCURACY_THRESHOLD, 1.0) if n else 0.0
+        filled = int(bar_len * pct)
+        bar = "█" * filled + "░" * (bar_len - filled)
+        status = "✓" if mastered else " "
+        console.print(
+            f"  {status} [dim]{tier['id']:35s}[/dim] {bar} "
+            f"{acc * 100:.0f}% ({n})"
+        )
+    console.print()
 
     # --- weakest items -------------------------------------------------------
     weak = []
@@ -105,12 +102,4 @@ def print_dashboard(state):
                 weak.append((iid, acc, v["seen"], v["correct"]))
     weak.sort(key=lambda x: x[1])
 
-    if weak:
-        console.print("[bold]weakest items[/bold]")
-        for iid, acc, seen, correct in weak[:5]:
-            label = _format_item(iid)
-            console.print(
-                f"  [dim]{label:50s}[/dim] {acc * 100:3.0f}% "
-                f"({correct}/{seen})"
-            )
-        console.print()
+
