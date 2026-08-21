@@ -1,4 +1,27 @@
 {
+  "history": [
+    {
+      "accuracy": 0.8525,
+      "date": "2026-08-21",
+      "due": 753,
+      "mastered": 205,
+      "seen": 916
+    },
+    {
+      "accuracy": 0.853,
+      "date": "2026-08-21",
+      "due": 743,
+      "mastered": 206,
+      "seen": 920
+    },
+    {
+      "accuracy": 0.8527,
+      "date": "2026-08-21",
+      "due": 734,
+      "mastered": 206,
+      "seen": 923
+    }
+  ],
   "srs": {
     "abrir|gerund|None": {
       "box": 2,
@@ -85,10 +108,10 @@
       "seen": 3
     },
     "atreverse|imperative_affirmative|el": {
-      "box": 2,
+      "box": 1,
       "correct": 1,
       "due": "2026-08-21",
-      "seen": 1
+      "seen": 2
     },
     "atreverse|imperative_negative|el": {
       "box": 2,
@@ -96,16 +119,28 @@
       "due": "2026-08-21",
       "seen": 1
     },
-    "atreverse|preterite|el": {
+    "atreverse|present_subjunctive|vosotros": {
       "box": 2,
       "correct": 1,
-      "due": "2026-08-21",
-      "seen": 2
+      "due": "2026-08-22",
+      "seen": 1
+    },
+    "atreverse|preterite|el": {
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 3
     },
     "atreverse|preterite|tu": {
       "box": 1,
       "correct": 0,
       "due": "2026-08-20",
+      "seen": 1
+    },
+    "beber|conditional_perfect|ellos": {
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
       "seen": 1
     },
     "beber|conditional|ellos": {
@@ -229,16 +264,16 @@
       "seen": 3
     },
     "buscar|future|ellos": {
-      "box": 1,
-      "correct": 0,
-      "due": "2026-08-20",
-      "seen": 1
-    },
-    "buscar|gerund|None": {
       "box": 2,
       "correct": 1,
-      "due": "2026-08-13",
-      "seen": 1
+      "due": "2026-08-22",
+      "seen": 2
+    },
+    "buscar|gerund|None": {
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "buscar|present_indicative|el": {
       "box": 4,
@@ -505,10 +540,10 @@
       "seen": 2
     },
     "coger|future|yo": {
-      "box": 1,
-      "correct": 0,
-      "due": "2026-08-14",
-      "seen": 1
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 2
     },
     "coger|gerund|None": {
       "box": 2,
@@ -637,10 +672,10 @@
       "seen": 2
     },
     "comer|conditional_perfect|tu": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-21",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "comer|future_perfect|yo": {
       "box": 2,
@@ -853,10 +888,10 @@
       "seen": 2
     },
     "construir|present_indicative|ellos": {
-      "box": 3,
+      "box": 1,
       "correct": 2,
-      "due": "2026-07-31",
-      "seen": 2
+      "due": "2026-08-21",
+      "seen": 3
     },
     "construir|present_indicative|nosotros": {
       "box": 1,
@@ -1104,6 +1139,12 @@
       "due": "2026-08-13",
       "seen": 1
     },
+    "dar|imperfect_indicative|ellos": {
+      "box": 1,
+      "correct": 0,
+      "due": "2026-08-21",
+      "seen": 1
+    },
     "dar|present_indicative|el": {
       "box": 3,
       "correct": 2,
@@ -1169,6 +1210,12 @@
       "correct": 2,
       "due": "2026-08-21",
       "seen": 2
+    },
+    "decir|imperative_negative|ellos": {
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 1
     },
     "decir|imperfect_indicative|tu": {
       "box": 3,
@@ -1248,6 +1295,12 @@
       "due": "2026-08-21",
       "seen": 2
     },
+    "despertarse|imperative_negative|ellos": {
+      "box": 1,
+      "correct": 0,
+      "due": "2026-08-21",
+      "seen": 1
+    },
     "despertarse|imperative_negative|nosotros": {
       "box": 2,
       "correct": 1,
@@ -1303,10 +1356,10 @@
       "seen": 1
     },
     "despertarse|present_subjunctive|vosotros": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-21",
-      "seen": 2
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 3
     },
     "despertarse|preterite|el": {
       "box": 4,
@@ -1597,10 +1650,10 @@
       "seen": 3
     },
     "dormir|preterite|ellos": {
-      "box": 1,
-      "correct": 1,
-      "due": "2026-08-18",
-      "seen": 3
+      "box": 2,
+      "correct": 2,
+      "due": "2026-08-22",
+      "seen": 4
     },
     "dormir|preterite|vosotros": {
       "box": 3,
@@ -1660,6 +1713,12 @@
       "box": 2,
       "correct": 1,
       "due": "2026-08-14",
+      "seen": 1
+    },
+    "elegir|present_perfect|nosotros": {
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
       "seen": 1
     },
     "elegir|present_perfect|vosotros": {
@@ -1789,10 +1848,10 @@
       "seen": 2
     },
     "empezar|preterite|vosotros": {
-      "box": 1,
-      "correct": 0,
-      "due": "2026-08-03",
-      "seen": 1
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 2
     },
     "entender|conditional|el": {
       "box": 3,
@@ -1891,10 +1950,10 @@
       "seen": 1
     },
     "escribir|conditional_perfect|nosotros": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-15",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "escribir|future|el": {
       "box": 2,
@@ -1921,10 +1980,10 @@
       "seen": 1
     },
     "escribir|imperfect_indicative|ellos": {
-      "box": 1,
-      "correct": 1,
-      "due": "2026-08-18",
-      "seen": 2
+      "box": 2,
+      "correct": 2,
+      "due": "2026-08-22",
+      "seen": 3
     },
     "escribir|imperfect_subjunctive_se|ellos": {
       "box": 2,
@@ -2023,10 +2082,10 @@
       "seen": 1
     },
     "estar|imperfect_indicative|yo": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-11",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "estar|pluperfect|el": {
       "box": 2,
@@ -2304,6 +2363,12 @@
       "due": "2026-08-21",
       "seen": 1
     },
+    "hablar|pluperfect_subjunctive_ra|nosotros": {
+      "box": 1,
+      "correct": 0,
+      "due": "2026-08-21",
+      "seen": 1
+    },
     "hablar|pluperfect|vosotros": {
       "box": 2,
       "correct": 1,
@@ -2533,16 +2598,16 @@
       "seen": 1
     },
     "huir|present_subjunctive|yo": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-19",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "huir|preterite|ellos": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-10",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "huir|preterite|vosotros": {
       "box": 2,
@@ -2701,10 +2766,10 @@
       "seen": 1
     },
     "ir|present_indicative|vosotros": {
-      "box": 3,
-      "correct": 2,
-      "due": "2026-08-21",
-      "seen": 2
+      "box": 4,
+      "correct": 3,
+      "due": "2026-08-28",
+      "seen": 3
     },
     "ir|present_indicative|yo": {
       "box": 3,
@@ -2845,10 +2910,10 @@
       "seen": 1
     },
     "levantarse|preterite|ellos": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-21",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "llegar|gerund|None": {
       "box": 2,
@@ -2869,10 +2934,10 @@
       "seen": 2
     },
     "llegar|present_indicative|el": {
-      "box": 4,
-      "correct": 3,
-      "due": "2026-08-16",
-      "seen": 3
+      "box": 5,
+      "correct": 4,
+      "due": "2026-09-06",
+      "seen": 4
     },
     "llegar|present_indicative|nosotros": {
       "box": 3,
@@ -2929,10 +2994,10 @@
       "seen": 2
     },
     "morir|present_indicative|tu": {
-      "box": 2,
-      "correct": 4,
-      "due": "2026-08-11",
-      "seen": 5
+      "box": 3,
+      "correct": 5,
+      "due": "2026-08-24",
+      "seen": 6
     },
     "morir|present_indicative|vosotros": {
       "box": 2,
@@ -2947,10 +3012,10 @@
       "seen": 1
     },
     "morir|preterite|vosotros": {
-      "box": 2,
+      "box": 1,
       "correct": 1,
-      "due": "2026-08-11",
-      "seen": 1
+      "due": "2026-08-21",
+      "seen": 2
     },
     "oir|conditional_perfect|yo": {
       "box": 3,
@@ -3120,6 +3185,12 @@
       "due": "2026-08-14",
       "seen": 1
     },
+    "pagar|present_subjunctive|ellos": {
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 1
+    },
     "pagar|preterite|el": {
       "box": 2,
       "correct": 1,
@@ -3137,6 +3208,12 @@
       "correct": 2,
       "due": "2026-08-10",
       "seen": 2
+    },
+    "parecer|future|ellos": {
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 1
     },
     "parecer|future|nosotros": {
       "box": 2,
@@ -3367,10 +3444,10 @@
       "seen": 3
     },
     "pensar|preterite|el": {
-      "box": 1,
-      "correct": 0,
-      "due": "2026-07-30",
-      "seen": 1
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 2
     },
     "poder|gerund|None": {
       "box": 3,
@@ -3415,10 +3492,10 @@
       "seen": 6
     },
     "poder|present_indicative|yo": {
-      "box": 1,
-      "correct": 1,
-      "due": "2026-08-07",
-      "seen": 2
+      "box": 2,
+      "correct": 2,
+      "due": "2026-08-22",
+      "seen": 3
     },
     "poder|present_perfect|el": {
       "box": 2,
@@ -3427,10 +3504,10 @@
       "seen": 1
     },
     "poder|present_subjunctive|el": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-17",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "poder|present_subjunctive|vosotros": {
       "box": 3,
@@ -3529,10 +3606,10 @@
       "seen": 2
     },
     "preferir|imperfect_subjunctive_ra|tu": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-19",
-      "seen": 3
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 4
     },
     "preferir|present_indicative|el": {
       "box": 3,
@@ -3571,10 +3648,10 @@
       "seen": 1
     },
     "preferir|preterite|ellos": {
-      "box": 1,
-      "correct": 0,
-      "due": "2026-08-20",
-      "seen": 2
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 3
     },
     "preferir|preterite|nosotros": {
       "box": 3,
@@ -3609,8 +3686,8 @@
     "quejarse|preterite|yo": {
       "box": 1,
       "correct": 0,
-      "due": "2026-08-20",
-      "seen": 1
+      "due": "2026-08-21",
+      "seen": 2
     },
     "querer|gerund|None": {
       "box": 2,
@@ -3841,10 +3918,10 @@
       "seen": 3
     },
     "saber|gerund|None": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-13",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "saber|imperative_negative|vosotros": {
       "box": 2,
@@ -4039,10 +4116,10 @@
       "seen": 1
     },
     "salir|present_indicative|tu": {
-      "box": 1,
-      "correct": 0,
-      "due": "2026-07-28",
-      "seen": 1
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 2
     },
     "salir|present_indicative|vosotros": {
       "box": 4,
@@ -4309,10 +4386,10 @@
       "seen": 2
     },
     "sentir|imperfect_indicative|nosotros": {
-      "box": 4,
-      "correct": 3,
-      "due": "2026-08-20",
-      "seen": 3
+      "box": 5,
+      "correct": 4,
+      "due": "2026-09-06",
+      "seen": 4
     },
     "sentir|imperfect_indicative|vosotros": {
       "box": 2,
@@ -4543,10 +4620,10 @@
       "seen": 1
     },
     "ser|preterite|nosotros": {
-      "box": 3,
-      "correct": 2,
-      "due": "2026-08-12",
-      "seen": 3
+      "box": 4,
+      "correct": 3,
+      "due": "2026-08-28",
+      "seen": 4
     },
     "tener|conditional|el": {
       "box": 2,
@@ -4860,6 +4937,12 @@
       "due": "2026-08-13",
       "seen": 1
     },
+    "valer|imperative_affirmative|tu": {
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 1
+    },
     "valer|imperfect_indicative|el": {
       "box": 4,
       "correct": 3,
@@ -5011,10 +5094,10 @@
       "seen": 4
     },
     "venir|present_indicative|tu": {
-      "box": 3,
-      "correct": 2,
-      "due": "2026-07-31",
-      "seen": 2
+      "box": 4,
+      "correct": 3,
+      "due": "2026-08-28",
+      "seen": 3
     },
     "venir|present_indicative|vosotros": {
       "box": 1,
@@ -5173,10 +5256,10 @@
       "seen": 3
     },
     "vestirse|imperative_negative|tu": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-21",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "vestirse|imperfect_indicative|ellos": {
       "box": 3,
@@ -5227,16 +5310,16 @@
       "seen": 1
     },
     "vestirse|present_subjunctive|el": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-21",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "vestirse|present_subjunctive|nosotros": {
-      "box": 2,
-      "correct": 1,
-      "due": "2026-08-21",
-      "seen": 1
+      "box": 3,
+      "correct": 2,
+      "due": "2026-08-24",
+      "seen": 2
     },
     "vestirse|present_subjunctive|vosotros": {
       "box": 2,
@@ -5400,6 +5483,12 @@
       "due": "2026-08-13",
       "seen": 1
     },
+    "volver|imperfect_indicative|el": {
+      "box": 2,
+      "correct": 1,
+      "due": "2026-08-22",
+      "seen": 1
+    },
     "volver|imperfect_subjunctive_se|el": {
       "box": 2,
       "correct": 1,
@@ -5524,8 +5613,6 @@
       true,
       true,
       true,
-      true,
-      true,
       false,
       true,
       true,
@@ -5544,6 +5631,8 @@
       true,
       true,
       false,
+      true,
+      true,
       true,
       true,
       true,
@@ -5565,8 +5654,6 @@
       true,
       true,
       true,
-      true,
-      true,
       false,
       true,
       true,
@@ -5579,46 +5666,6 @@
       true,
       true,
       false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true
-    ],
-    "04_present_irregular": [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
       true,
       true,
       true,
@@ -5641,6 +5688,48 @@
       true,
       true,
       false
+    ],
+    "04_present_irregular": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
     ],
     "05_preterite_regular": [
       true,
@@ -5686,12 +5775,6 @@
     ],
     "06_preterite_ortho_stem": [
       true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
       true,
       true,
       true,
@@ -5722,6 +5805,12 @@
       true,
       true,
       false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
       true,
       true,
       true
@@ -5740,7 +5829,6 @@
       true,
       true,
       true,
-      true,
       false,
       true,
       true,
@@ -5766,7 +5854,8 @@
       true,
       true,
       false,
-      false
+      false,
+      true
     ],
     "08_imperfect": [
       true,
@@ -5779,11 +5868,6 @@
       true,
       true,
       true,
-      true,
-      true,
-      true,
-      true,
-      true,
       false,
       true,
       true,
@@ -5808,14 +5892,16 @@
       true,
       true,
       false,
-      false
+      false,
+      true,
+      false,
+      true,
+      true,
+      true
     ],
     "09_future_conditional": [
       true,
       true,
-      false,
-      true,
-      true,
       true,
       false,
       true,
@@ -5850,12 +5936,13 @@
       true,
       true,
       true,
-      false
+      false,
+      true,
+      true,
+      true
     ],
     "10_gerund_participle": [
       true,
-      false,
-      true,
       true,
       true,
       true,
@@ -5889,6 +5976,8 @@
       false,
       true,
       false,
+      true,
+      true,
       true,
       true,
       true,
@@ -5899,7 +5988,6 @@
       true,
       true,
       true,
-      true,
       false,
       true,
       true,
@@ -5933,6 +6021,7 @@
       false,
       false,
       false,
+      true,
       true,
       true
     ],
@@ -5943,9 +6032,6 @@
       true,
       true,
       true,
-      true,
-      true,
-      true,
       false,
       true,
       true,
@@ -5962,6 +6048,9 @@
       true,
       false,
       false,
+      true,
+      true,
+      true,
       true,
       true,
       true,
@@ -5979,12 +6068,6 @@
       true
     ],
     "13_present_subjunctive": [
-      true,
-      true,
-      true,
-      false,
-      true,
-      true,
       false,
       true,
       true,
@@ -6014,6 +6097,12 @@
       true,
       false,
       false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
       true,
       true,
       true,
@@ -6029,7 +6118,6 @@
       true,
       true,
       true,
-      true,
       false,
       true,
       false,
@@ -6059,6 +6147,7 @@
       true,
       true,
       false,
+      true,
       true,
       true
     ],
@@ -6069,7 +6158,6 @@
       true,
       true,
       true,
-      true,
       false,
       true,
       true,
@@ -6102,7 +6190,8 @@
       true,
       true,
       false,
-      true
+      true,
+      false
     ],
     "16_imperative": [
       true,
@@ -6121,10 +6210,6 @@
       true,
       true,
       true,
-      true,
-      true,
-      true,
-      true,
       false,
       true,
       true,
@@ -6144,6 +6229,10 @@
       true,
       true,
       true,
+      true,
+      true,
+      true,
+      false,
       true
     ],
     "17_reflexive": [
@@ -6153,16 +6242,6 @@
       true,
       true,
       true,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
       false,
       true,
       true,
@@ -6185,6 +6264,16 @@
       true,
       true,
       false,
+      true,
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
       true,
       true
     ]
