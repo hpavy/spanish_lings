@@ -11,7 +11,7 @@ from srs import record_answer, due_items, new_items
 from checker import check
 from tier_progress import record_tier_log, tier_accuracy, tier_is_mastered, MIN_SAMPLE, ACCURACY_THRESHOLD
 from tense_colors import color_for_tense, label_for_tense
-from stats import print_dashboard
+from stats import print_dashboard, take_snapshot
 
 console = Console()
 
@@ -111,6 +111,9 @@ def main():
 
     print_dashboard(state)
     run_session(state)
+    state.setdefault("history", []).append(take_snapshot(state))
+    # keep only last 90 snapshots (~3 months of daily practice)
+    del state["history"][:-90]
     save(state)
 
 
